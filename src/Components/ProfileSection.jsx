@@ -75,7 +75,7 @@ export default function ProfileSection() {
               w="fit-content"
               _hover={{ bg: "white", color: "#BB1679" }}
             />
-            <Text>Profile</Text>
+            <Text fontSize={"sm"} fontWeight={"700"}>Profile</Text>
           </Button>
         </PopoverTrigger>
         <PopoverContent w="fit-content" _focus={{ boxShadow: "md" }} mt={0}>

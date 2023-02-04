@@ -128,8 +128,8 @@ export default function Navbar() {
             </Box>
           </NavLink>
           
-          <Flex display={{ base: "none", md: "flex" }} border={'1px solid black'}w={'75%'} alignItems={"center"}>
-            <NavLink to="/Product">
+          <Flex display={{ base: "none", md: "flex" }} border={'1px solid black'} w={'75%'} alignItems={"center"}>
+            <NavLink to="/Product" >
               <DesktopNav />
             </NavLink>
           </Flex>
@@ -171,7 +171,7 @@ export default function Navbar() {
               <MenuButton>
                 <Button
                   as={"a"}
-                  fontSize={"xs"}
+                  fontSize={"sm"}
                   fontWeight={"700"}
                   variant={"link"}
                 >

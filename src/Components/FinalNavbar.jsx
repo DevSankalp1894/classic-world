@@ -90,7 +90,10 @@ export default function FinalNavbar() {
           <Flex
             display={{ base: "none", md: "none",lg:"flex" }}
             ml={10}
+           
+            w={"60%"}
             alignItems={"center"}
+           
           >
             <DesktopNav />
           </Flex>
@@ -99,15 +102,15 @@ export default function FinalNavbar() {
         <Stack alignItems={'center'} >
           <InputGroup
             display={{ base: "none", sm: "none", md: "none", lg: "block" }}
-          >
+           w={"500px"} mr={"10"}>
             <InputLeftElement
               pointerEvents="none"
               children={<SearchIcon color="gray.500" />}
             />
             <Input
               type="text"
-              placeholder="Search..."
-              borderBottom={"1px solid #BB1679"}
+              placeholder="Search for products, brands and more"
+              borderBottom={"1px solid #00A3C4"}
             />
           </InputGroup>
          
@@ -144,7 +147,7 @@ export default function FinalNavbar() {
                 w="fit-content"
                 _hover={{ bg: "white" }}
               />
-              <Text>Wishlist</Text>
+              <Text  fontSize={"sm"} fontWeight={"700"}>Wishlist</Text>
             </Button>
           </NavLink>
           <HStack spacing={-8} alignItems={'flex-start'} justifyContent={'center'} >
@@ -163,7 +166,7 @@ export default function FinalNavbar() {
                 w="fit-content"
                 _hover={{ bg: "white" }}
               />
-              <Text>Bag</Text>
+              <Text fontSize={"sm"} fontWeight={"700"}>Bag</Text>
             </Button>
            
           </NavLink>
@@ -275,8 +278,8 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? "#"}
-                fontSize={{md:'xs',lg:"sm"}}
-                fontWeight={500}
+                fontSize={{md:'xs',lg:"md"}}
+                fontWeight={700}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
@@ -303,6 +306,7 @@ const DesktopNav = () => {
                   direction={"row"}
                   width={"auto"}
                   gap={"20px"}
+                  
                   justifyContent={"space-between"}
                 >
                   {navItem.children.map((child) => (
@@ -341,14 +345,15 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
         >
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.700" }}
-            fontWeight={500}
+            _groupHover={{ color: "pink.400" }}
+            fontWeight={600}
+            color={"pink.400"}
           >
             {label}
           </Text>
           <Flex direction={"column"} align={"flex-start"} gap={"5px"}>
             {subLabel.map((el, i) => (
-              <Text fontSize={"sm"} key={i}>
+              <Text fontSize={"md"} key={i}>
                 {el}
               </Text>
             ))}
@@ -398,11 +403,12 @@ const MobileNavItem = ({ label, children, href }) => {
         zIndex={9999}
         _hover={{
           textDecoration: "none",
+          borderBottom:"3px solid red"
   
         }}
       >
         <Text
-          fontWeight={600}
+          fontWeight={700}
           color={useColorModeValue("gray.600", "gray.200")}
           fontSize={{base:12,sm:13,md:18,lg:18}}
         >
